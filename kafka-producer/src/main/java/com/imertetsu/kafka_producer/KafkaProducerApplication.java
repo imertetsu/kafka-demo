@@ -1,13 +1,13 @@
-package com.imertetsu.kafka;
+package com.imertetsu.kafka_producer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class KafkaDemoApplication {
+public class KafkaProducerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(KafkaDemoApplication.class, args);
+		SpringApplication.run(KafkaProducerApplication.class, args);
 	}
 
 }
