@@ -1,6 +1,6 @@
-package com.imertetsu.kafka_producer.stream;
+package com.imertetsu.kafka_producer.services;
 
-import com.imertetsu.kafka_producer.producer.WikimediaProducer;
+import com.imertetsu.kafka_producer.services.WikimediaProducer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,7 +26,8 @@ public class WikimediaStreamConsumer {
                 .uri("/stream/recentchange")
                 .retrieve()
                 .bodyToFlux(String.class)
-                .subscribe(log::info);
+                .subscribe(message -> producer.sendMessage(message));
+                //.subscribe(log::info);
     }
 
 }

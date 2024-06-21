@@ -1,4 +1,4 @@
-package com.imertetsu.kafka_producer.producer;
+package com.imertetsu.kafka_producer.services;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
