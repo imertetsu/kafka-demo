@@ -1,0 +1,15 @@
+#Create topics
+$ bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
+
+#Write events into the topic
+$ bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
+This is my first event
+This is my second event
+
+#Read events
+$ bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+This is my first event
+This is my second event
+
+#Read Topics
+$ bin/kafka-topics.sh --list --bootstrap-server localhost:9092
